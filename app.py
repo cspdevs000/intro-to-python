@@ -206,20 +206,20 @@ for i in range(0, 10):
 #         if element == 12:
 #             print("hi i'm 12")
 
-# students = [
-#     {
-#         'name': 'cameron',
-#         'city': 'new york'
-#     },
-#     {
-#         'name': 'blameron',
-#         'city': 'blue york'
-#     },
-#     {
-#         'name': 'scrameron',
-#         'city': 'screw york'
-#     }
-# ]
+students = [
+    {
+        'name': 'cameron',
+        'city': 'new york'
+    },
+    {
+        'name': 'blameron',
+        'city': 'blue york'
+    },
+    {
+        'name': 'scrameron',
+        'city': 'screw york'
+    }
+]
 
 # for i in range(len(students)):
 #     student = students[i]
@@ -281,3 +281,30 @@ def madlib(noun, adjective, adverb, verb, noun_3="cat"):
     form = form.format(noun, adjective, adverb, verb, noun_3)
     print(form)
 madlib('monster', 'soft', 'quickly', 'jump')
+
+# return values
+def add(num1, num2):
+  return num1 + num2
+
+total = add(2, 3)
+print("2 + 3 =", total)
+
+
+#return a list of all cities from the students array^
+def get_cities(students):
+    results = []
+    for s in students:
+        if s.get('city'):
+            results.append(s.get('city'))
+    return results
+
+print("cities list: ", get_cities(students))
+
+def get_names(students):
+    name_results = []
+    for s in students:
+        if s.get('name'):
+            name_results.append(s.get('name'))
+    return name_results
+
+print("names list: ", get_names(students))
