@@ -206,45 +206,72 @@ for i in range(0, 10):
 #         if element == 12:
 #             print("hi i'm 12")
 
-students = [
-    {
-        'name': 'cameron',
-        'city': 'new york'
-    },
-    {
-        'name': 'blameron',
-        'city': 'blue york'
-    },
-    {
-        'name': 'scrameron',
-        'city': 'screw york'
-    }
-]
+# students = [
+#     {
+#         'name': 'cameron',
+#         'city': 'new york'
+#     },
+#     {
+#         'name': 'blameron',
+#         'city': 'blue york'
+#     },
+#     {
+#         'name': 'scrameron',
+#         'city': 'screw york'
+#     }
+# ]
 
-for i in range(len(students)):
-    student = students[i]
-    print(student.get('name'))
+# for i in range(len(students)):
+#     student = students[i]
+#     print(student.get('name'))
 
-for i in range(len(students)):
-    student = students[i]
-    print(student.get('city'))
-    if student.get('city') == 'new york':
-        print(f'{student.get("name")} wins a lifetime supply of soylent')
+# for i in range(len(students)):
+#     student = students[i]
+#     print(student.get('city'))
+#     if student.get('city') == 'new york':
+#         print(f'{student.get("name")} wins a lifetime supply of soylent')
 
-for student in students:
-    print(student)
+# for student in students:
+#     print(student)
 
-for key in students[0]:
-    print('key', key)
-    print('value', students[0].get(key))
+# for key in students[0]:
+#     print('key', key)
+#     print('value', students[0].get(key))
 
-for key in students[1]:
-    print('key', key)
-    print('value', students[1][key])
+# for key in students[1]:
+#     print('key', key)
+#     print('value', students[1][key])
 
-for anything in students[2]:
-    print('part 3', anything)
-    print('value', students[2][anything])
+# for anything in students[2]:
+#     print('part 3', anything)
+#     print('value', students[2][anything])
 
-for key, value in students[0].items():
-    print(key, '->', value)
+# for key, value in students[0].items():
+#     print(key, '->', value)
+
+# print("My favorite foods:")
+# foods = ["carrots", "kale", "beets"]
+# for i, food in enumerate(foods):
+#     print("{}. {}".format(i, food))
+
+car = {"wheels": 4, "doors": 2, "seats": 5}
+for key in car:
+    print("my car has {num} {thing}".format(thing=key, num=car[key]))
+
+def say_hello():
+  print("Hello, World!")
+say_hello()
+
+def say_hello_friend(friend="Tim"): #Tim is the default value, if you call the function with another argument, that will print
+  print("Hello, {}!".format(friend))
+say_hello_friend()
+say_hello_friend('youthere')
+
+def move(name, city="Seattle", state="Washington"):
+  msg = "{} is moving to {}, {}"
+  msg = msg.format(name, city, state)
+  print(msg)
+move('charlie')
+move('cameron, the moon, hell')
+move('cameron', 'the moon', 'hell')
+move("Charlie", state="Oregon", city="Portland") #can mix up the order if you name the parameter
