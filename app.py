@@ -275,3 +275,9 @@ move('charlie')
 move('cameron, the moon, hell')
 move('cameron', 'the moon', 'hell')
 move("Charlie", state="Oregon", city="Portland") #can mix up the order if you name the parameter
+
+def madlib(noun, adjective, adverb, verb, noun_3="cat"):
+    form = "A {} is an {} story that you {} add words to. When prompted, you {} a specific type of {}."
+    form = form.format(noun, adjective, adverb, verb, noun_3)
+    print(form)
+madlib('monster', 'soft', 'quickly', 'jump')
