@@ -207,18 +207,42 @@ for i in range(0, 10):
 #             print("hi i'm 12")
 
 students = [
-    {
-        'name': 'cameron',
-        'city': 'new york'
+    { 
+        "name": "Kimmie",
+        "city": "Atlanta"
     },
-    {
-        'name': 'blameron',
-        'city': 'blue york'
+    { 
+        "name": "Chris",
+        "city": "Salt Lake City"
     },
-    {
-        'name': 'scrameron',
-        'city': 'screw york'
-    }
+    { 
+        "name": "Zack",
+        "city": "Los Angeles"
+    },
+     { 
+        "name": "John",
+        "city": "Atlanta"
+    },
+    { 
+        "name": "Jane",
+        "city": "New York"
+    },
+    { 
+        "name": "Rob",
+        "city": "Los Angeles"
+    },
+     { 
+        "name": "Harper",
+        "city": "Washington"
+    },
+    { 
+        "name": "Mike",
+        "city": "Seattle"
+    },
+    { 
+        "name": "Set",
+        "city": "San Francisco"
+    },
 ]
 
 # for i in range(len(students)):
@@ -297,14 +321,34 @@ def get_cities(students):
         if s.get('city'):
             results.append(s.get('city'))
     return results
-
 print("cities list: ", get_cities(students))
 
+#return a list of names^^
 def get_names(students):
     name_results = []
     for s in students:
         if s.get('name'):
             name_results.append(s.get('name'))
     return name_results
-
 print("names list: ", get_names(students))
+
+#parse students by city(return a dict that has a key for each city and a list of students for each city)
+def parse_by_cities(students):
+    
+    parsed_by_city = {}
+    for student in students:
+        print('printing inside', student)
+        if student.get('city'):
+            if not parsed_by_city.get(student.get('city')):
+                print('does not exist')
+                parsed_by_city[student.get('city')] = []
+                city_list = parsed_by_city[student.get('city')]
+                city_list.append(student.get('name'))
+            else:
+                print('city exists')
+                city_list = parsed_by_city[student.get('city')]
+                city_list.append(student.get('name'))
+
+    return parsed_by_city
+
+print("students parsed by city: ", parse_by_cities(students))
