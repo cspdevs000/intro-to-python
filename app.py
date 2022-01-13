@@ -154,3 +154,97 @@ year = 1889
 n = 42
 my_message = f"{state} was the {n}{st_nd_rd_th(n)} state to join the union in {year}."
 print(my_message)
+
+# look up garbage collection
+# get a book on computer science
+
+# loops
+
+for i in range(0, 10):
+  if i % 2 == 0:
+    print("{} is even".format(i))
+  if i % 2 == 1:
+    print("{} is odd".format(i))
+
+# n = 0
+# while n < 1000:
+#     n+=1
+#     if n % 2 == 0:
+#         print(f'{n} is even...')
+
+# n = True
+# numba = 1
+# while n:
+#     if n % 2 == 0:
+#         print(f'{numba} is even...')
+
+#         if numba == 750:
+#             n = False
+#             print('end program')
+#     numba += 1
+
+# for loop
+# for i in range(1, 251):
+#     if i % 2 == 0:
+#         print(f"{i} is even...")
+#         if i == 250:
+#             print('end program')
+
+# for i in range(1, 251, 5): # thid argument is the step range
+#     if i % 2 == 0:
+#         print(f"{i} is even...")
+#         if i == 250:
+#             print('end program')
+
+# numberz = [213, 214214, 12, 21, 3525, 1, 563]
+# for i in range (len(numberz)):
+#     element = numberz[i]
+#     if element % 2 == 0:
+#         print(f"{element} is even...")
+#         if element == 563:
+#             print('end program')
+#         if element == 12:
+#             print("hi i'm 12")
+
+students = [
+    {
+        'name': 'cameron',
+        'city': 'new york'
+    },
+    {
+        'name': 'blameron',
+        'city': 'blue york'
+    },
+    {
+        'name': 'scrameron',
+        'city': 'screw york'
+    }
+]
+
+for i in range(len(students)):
+    student = students[i]
+    print(student.get('name'))
+
+for i in range(len(students)):
+    student = students[i]
+    print(student.get('city'))
+    if student.get('city') == 'new york':
+        print(f'{student.get("name")} wins a lifetime supply of soylent')
+
+for student in students:
+    print(student)
+
+for key in students[0]:
+    print('key', key)
+    print('value', students[0].get(key))
+
+for key in students[1]:
+    print('key', key)
+    print('value', students[1][key])
+
+for anything in students[2]:
+    print('part 3', anything)
+    print('value', students[2][anything])
+
+for key, value in students[0].items():
+    print(key, '->', value)
