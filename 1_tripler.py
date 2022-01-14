@@ -1,6 +1,5 @@
 def tripler(arr):
     answer = []
-
     for num in arr:
         answer.append(num * 3)
     return answer
